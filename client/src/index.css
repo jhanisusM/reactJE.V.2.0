@@ -1,0 +1,10 @@
+
+body {
+    overflow-x: hidden;
+    background-image: url("http://louisvilleky.com/wp-content/uploads/2015/07/Screen-Shot-2015-07-09-at-3.16.06-PM.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
