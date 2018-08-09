@@ -33,6 +33,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mongoose": "^5.2.5",
+    "react-slick": "^0.23.1",
     "routes": "^2.1.0"
   }
 }

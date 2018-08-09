@@ -61,15 +61,6 @@ class Horses extends Component {
         }
     };
 
-    searchByMare = event => {
-        event.preventDefault();
-        API.getHorseByMare(this.state.name)
-            .then(res => {
-                this.setState({ foundHorse: [res.data], horses: [], name: "", sire: "", mare: "", gender: "", age: "" });
-            }).catch(err => console.log(err));
-    };
-
-
 
     yearlings = () => {
         const yearlings = this.state.horses.filter(horse => (horse.age < 5));

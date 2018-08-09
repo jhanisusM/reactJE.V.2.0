@@ -3,7 +3,7 @@ import "./Cards.css";
 
 const Card = props => (
     <div className="card mt-4">
-        <div className="card-header">
+        <div className="card-header main">
             <strong>
                 {props.title}
             </strong>

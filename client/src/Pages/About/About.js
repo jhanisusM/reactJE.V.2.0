@@ -48,6 +48,7 @@ const About = () => (
           </p>
                         <Footer />
                     </Card>
+                    <br />
                 </Col>
             </Row>
         </Container>
