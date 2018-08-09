@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Horses from "./Pages/Horses";
 import Home from "../src/Pages/Home"
+import About from "../src/Pages/About";
+import Horses from "./Pages/Horses";
 
 import Navbar from "./components/Nav"
 import Weanlings from "./Pages/Weanlings";
@@ -13,15 +14,8 @@ const App = () => (
     <div>
       <Navbar />
       <Switch>
-        {/* <Horses /> */}
-        <Route  path="/" component={Home} />
-        {/* 
-        <Route  path="/SearchHorses" component={SearchHorses} />
-        <Route  path="/AddHorse" component={AddHorse} />
-      <Route  path="/AllHorses" component={AllHorses} /> */}
-        {/* <Route path="/Weanlings" component={Weanlings} /> */}
-        {/* <Route  path="/Yearlings" component={Yearlings} />
-        <Route  path="/About" component={About} /> */}
+        <Route  exact path="/" component={Home} />
+        <Route  exact path="/About" component={About} /> 
       </Switch>
 
     </div>
