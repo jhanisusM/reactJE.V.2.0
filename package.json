@@ -19,9 +19,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhanisusM/Hashi-P3.git"
+    "url": "git+https://github.com/jhanisusM/reactJE.V.2.0"
   },
-  "author": "Hashi",
+  "author": "JhanisusM",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
@@ -37,6 +37,7 @@
     "express": "^4.16.3",
     "mongoose": "^5.2.5",
     "react-slick": "^0.23.1",
-    "routes": "^2.1.0"
+    "routes": "^2.1.0",
+    "if-env": "^1.0.4"
   }
 }
