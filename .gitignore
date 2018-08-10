@@ -72,10 +72,6 @@ typings/
 # Serverless directories
 .serverless
 
-#Yarnlcok
-**/client/yarn.lock
-
-package-lock.json
 
 #DS_Store
 .DS_Store
