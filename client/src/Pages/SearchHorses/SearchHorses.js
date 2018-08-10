@@ -18,6 +18,7 @@ class SearchHorses extends Component {
         gender: "",
         age: "",
     };
+    
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
