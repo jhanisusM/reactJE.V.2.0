@@ -1,6 +1,9 @@
 {
-  "name": "hashi-p3",
-  "version": "1.0.0",
+  "name": "SoloJE_v.2.0.1",
+  "version": "2.0.1",
+  "engines": {
+    "node": "8.9.4"
+  },
   "description": "Horse database management",
   "main": "server.js",
   "scripts": {

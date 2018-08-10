@@ -27,7 +27,7 @@ class Home extends Component {
                             <div className="pic">
                                 <Slider {...settings}>
                                     <div>
-                                        <img src={"https://c2.staticflickr.com/8/7513/15811731456_c52eab0ee2_b.jpg"} />
+                                        <img src="https://c2.staticflickr.com/8/7513/15811731456_c52eab0ee2_b.jpg" />
                                         <h3>1</h3>
                                     </div>
                                     <div>
