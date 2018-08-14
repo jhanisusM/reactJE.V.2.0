@@ -18,6 +18,9 @@ export default {
   getHorseByMare: function(mare) {
     return axios.get("/api/horses/mare/" + mare);
   },
+  getHorseByGender: function(gender) {
+    return axios.get("/api/horses/gender/" + gender);
+  },
 
   // Deletes the Horse  with the given id
   deleteHorse: function(id) {

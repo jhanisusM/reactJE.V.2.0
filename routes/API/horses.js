@@ -18,6 +18,8 @@ router.route("/sire/:sire")
   .get(horsesController.findBySire);
 router.route("/mare/:mare")
   .get(horsesController.findByMare);
+router.route("/gender/:gender")
+  .get(horsesController.findByGender);
 
 
 module.exports = router;

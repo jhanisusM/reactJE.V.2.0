@@ -1,16 +1,11 @@
 import React, { Component } from "react";
 import Card from "../../components/Card";
 import API from "../../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import DeleteBtn from "../../components/DeleteBtn";
-import Jumbotron from "../../components/Jumbotron";
 import Footer from "../../components/Footer";
 
 class AddHorse extends Component {
-
     state = {
         horses: [],
         foundHorse: [],
@@ -20,6 +15,7 @@ class AddHorse extends Component {
         gender: "",
         age: "",
     };
+
     handleFormSubmit = event => {
         event.preventDefault();
         console.log(this.state.name);
@@ -33,8 +29,11 @@ class AddHorse extends Component {
             })
                 .then(res => console.log("Horse was successfully added"))
                 .catch(err => console.log(err));
-        }
+                window.location.reload();
+        };
+        this.addHorseForm();
     };
+
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -42,13 +41,52 @@ class AddHorse extends Component {
         });
     };
 
-    horseAdded = () => {
+    addHorseForm = () => {
         return (
             <div>
-
-            <Jumbotron>
-                <h1>Horse was successfully added to the Data Base  </h1>
-            </Jumbotron>
+                <form>
+                    <label for="">Name:</label>
+                    <Input
+                        value={this.state.name}
+                        onChange={this.handleInputChange}
+                        name="name"
+                        placeholder="Name (required)"
+                    />
+                    <label for="">Sire:</label>
+                    <Input
+                        value={this.state.sire}
+                        onChange={this.handleInputChange}
+                        name="sire"
+                        placeholder=" Sire (required)"
+                    />
+                    <label for="">Mare:</label>
+                    <Input
+                        value={this.state.mare}
+                        onChange={this.handleInputChange}
+                        name="mare"
+                        placeholder=" Mare (required)"
+                    />
+                    <label for="">Gender:</label>
+                    <Input
+                        value={this.state.gender}
+                        onChange={this.handleInputChange}
+                        name="gender"
+                        placeholder=" Gender (required)"
+                    />
+                    <label for="">Age:</label>
+                    <Input
+                        value={this.state.age}
+                        onChange={this.handleInputChange}
+                        name="age"
+                        type="number"
+                        placeholder=" Age (required)"
+                    />
+                    <FormBtn
+                        disabled={!(this.state.name && this.state.sire)}
+                        onClick={this.handleFormSubmit}>
+                        Add Horse
+                    </FormBtn>
+                </form>
             </div>
         )
     };
@@ -63,49 +101,7 @@ class AddHorse extends Component {
                             <br />
                             <br />
                             <Card title="Add a Horse" icon="">
-                                <form>
-                                    <label for="">Name:</label>
-                                    <Input
-                                        value={this.state.name}
-                                        onChange={this.handleInputChange}
-                                        name="name"
-                                        placeholder="Name (required)"
-                                    />
-                                    <label for="">Sire:</label>
-                                    <Input
-                                        value={this.state.sire}
-                                        onChange={this.handleInputChange}
-                                        name="sire"
-                                        placeholder=" Sire (required)"
-                                    />
-                                    <label for="">Mare:</label>
-                                    <Input
-                                        value={this.state.mare}
-                                        onChange={this.handleInputChange}
-                                        name="mare"
-                                        placeholder=" Mare (required)"
-                                    />
-                                    <label for="">Gender:</label>
-                                    <Input
-                                        value={this.state.gender}
-                                        onChange={this.handleInputChange}
-                                        name="gender"
-                                        placeholder=" Gender (required)"
-                                    />
-                                    <label for="">Age:</label>
-                                    <Input
-                                        value={this.state.age}
-                                        onChange={this.handleInputChange}
-                                        name="age"
-                                        type="number"
-                                        placeholder=" Age (required)"
-                                    />
-                                    <FormBtn
-                                        disabled={!(this.state.name && this.state.sire)}
-                                        onClick={this.handleFormSubmit}>
-                                        Add Horse
-                                    </FormBtn>
-                                </form>
+                                {this.addHorseForm()}
                                 <Footer />
                             </Card>
                             <br />

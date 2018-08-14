@@ -52,8 +52,7 @@ class AllHorses extends Component {
                                             <ListItem key={horse._id}>
                                                 <Link to={"/horses/" + horse._id}>
                                                     <strong>
-                                                        {horse.name} by {horse.sire} {horse.age}
-                                                    </strong>
+                                                    {horse.name} || {horse.sire} || {horse.mare} || {horse.gender} || {horse.age}                                                    </strong>
                                                 </Link>
                                                 <DeleteBtn onClick={() => this.deleteHorse(horse._id)} />
                                             </ListItem>

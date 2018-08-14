@@ -18,7 +18,11 @@ class SearchHorses extends Component {
         gender: "",
         age: "",
     };
-    
+
+    resultsReset = () => {
+        this.setState({ foundHorse: [], horses: [], name: "", sire: "", mare: "", gender: "", age: "" });
+    };
+
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -36,8 +40,8 @@ class SearchHorses extends Component {
         event.preventDefault();
         API.getHorseByName(this.state.name)
             .then(res => {
-                this.setState({ foundHorse: [res.data] });
-            }).catch(err => console.log(err));
+                this.setState({ foundHorse: [res.data], horses: [], name: "", sire: "", mare: "", gender: "", age: "" });
+            }).catch(err => console.log(err))
     };
 
     searchBySire = (event) => {
@@ -50,28 +54,36 @@ class SearchHorses extends Component {
 
     searchByMare = event => {
         event.preventDefault();
-        API.getHorseByMare(this.state.name)
+        API.getHorseByMare(this.state.mare)
             .then(res => {
-                this.setState({ foundHorse: [res.data], horses: [], name: "", sire: "", mare: "", gender: "", age: "" });
+                this.setState({ foundHorse: res.data, horses: [], name: "", sire: "", mare: "", gender: "", age: "" });
+            }).catch(err => console.log(err));
+    };
+    searchByGender = event => {
+        event.preventDefault();
+        API.getHorseByGender(this.state.gender)
+            .then(res => {
+                this.setState({ foundHorse: res.data, horses: [], name: "", sire: "", mare: "", gender: "", age: "" });
             }).catch(err => console.log(err));
     };
 
     renderSearchResults = () => {
         return (
             <List>
-                {this.state.foundHorse.map(Horses => (
-                    <ListItem key={Horses._id}>
-                        <Link to={"/horses/" + Horses._id}>
+                {this.state.foundHorse.map(horse => (
+                    <ListItem key={horse._id}>
+                        <Link to={"/horses/" + horse._id}>
                             <strong>
-                                {Horses.name} by {Horses.sire} {Horses.age}
+                                {horse.name} || {horse.sire} || {horse.mare} || {horse.gender} || {horse.age}
                             </strong>
                         </Link>
-                        <DeleteBtn onClick={() => this.deleteHorse(Horses._id)} />
+                        <DeleteBtn onClick={() => this.deleteHorse(horse._id)} />
                     </ListItem>
                 ))}
             </List>
         )
     };
+
 
     render() {
         return (
@@ -99,12 +111,13 @@ class SearchHorses extends Component {
                                                 <a className="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three" aria-selected="false">Mare Search</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" id="three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="Three" aria-selected="false">Gender Search</a>
+                                                <a className="nav-link" id="four-tab" data-toggle="tab" href="#four" role="tab" aria-controls="four" aria-selected="false">Gender Search</a>
                                             </li>
                                         </ul>
                                     </div>
 
                                     {/*---------- Name Search -------*/}
+                                    {/* {window.location.reload()} */}
                                     <div className="tab-content" id="myTabContent">
                                         <div className="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
                                             <h5 className="card-title">
@@ -121,13 +134,20 @@ class SearchHorses extends Component {
                                                         disabled={!(this.state.name)}
                                                         onClick={this.searchByName}>  Search
                                                      </FormBtn>
+                                                    <span></span>
+                                                    <FormBtn
+                                                        disabled={(this.state.name)}
+                                                        onClick={this.resultsReset}>  Clear
+                                                     </FormBtn>
                                                 </form>
+                                                <br />
                                                 <br />
                                                 {this.state.foundHorse.length ? (<div>{this.renderSearchResults()}</div>) : (<h3>No Results to Display</h3>)}
                                             </div>
                                         </div>
 
                                         {/*---------- Sire Search -------*/}
+
                                         <div className="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
                                             <h5 className="card-title">
                                                 <span className="fa fa-sitemap"></span> Sire Search</h5>
@@ -141,8 +161,14 @@ class SearchHorses extends Component {
                                                     />
                                                     <FormBtn
                                                         disabled={!(this.state.sire)}
-                                                        onClick={this.searchBySire}>  Search </FormBtn>
+                                                        onClick={this.searchBySire}>  Search
+                                                    </FormBtn>
+                                                    <FormBtn
+                                                        disabled={(this.state.name)}
+                                                        onClick={this.resultsReset}>  Clear
+                                                     </FormBtn>
                                                 </form>
+                                                <br />
                                                 <br />
                                                 {this.state.foundHorse.length ? (<div>{this.renderSearchResults()}</div>) : (<h3>No Results to Display</h3>)}
                                             </div>
@@ -163,27 +189,46 @@ class SearchHorses extends Component {
                                                     <FormBtn
                                                         disabled={!(this.state.mare)}
                                                         onClick={this.searchByMare}>
-                                                        Search</FormBtn>
+                                                        Search
+                                                    </FormBtn>
+                                                    <FormBtn
+                                                        disabled={(this.state.name)}
+                                                        onClick={this.resultsReset}>  Clear
+                                                     </FormBtn>
                                                 </form>
                                                 <br />
-                                                {this.state.foundHorse.length ? (
-                                                    <div>
-                                                        {this.renderSearchResults()}
-                                                    </div>
-                                                ) : (
-                                                        <h3>No Results to Display</h3>
-                                                    )}
+                                                <br />
+                                                {this.state.foundHorse.length ? (<div>{this.renderSearchResults()}</div>) : (<h3>No Results to Display</h3>)}
                                             </div>
 
                                         </div>
 
                                         {/*---------- Gender Search -------*/}
-                                        <div className="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
+                                        <div className="tab-pane fade p-3" id="four" role="tabpanel" aria-labelledby="four-tab">
                                             <h5 className="card-title">
-                                                <span className="fa fa-dot-circle-o"></span> Gender Search</h5>
+                                                <span className="fa fa-circle"></span> Gender Search</h5>
 
                                             <div className="card-body">
-
+                                                <form>
+                                                    <Input
+                                                        value={this.state.gender}
+                                                        onChange={this.handleInputChange}
+                                                        name="gender"
+                                                        placeholder="Gender (required)"
+                                                    />
+                                                    <FormBtn
+                                                        disabled={!(this.state.gender)}
+                                                        onClick={this.searchByGender}>
+                                                        Search
+                                                    </FormBtn>
+                                                    <FormBtn
+                                                        disabled={(this.state.gender)}
+                                                        onClick={this.resultsReset}>  Clear
+                                                     </FormBtn>
+                                                </form>
+                                                <br />
+                                                <br />
+                                                {this.state.foundHorse.length ? (<div>{this.renderSearchResults()}</div>) : (<h3>No Results to Display</h3>)}
                                             </div>
 
                                         </div>
