@@ -15,19 +15,22 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  
+  
   findByName: function(req, res) {
-    console.log(req.params)
     db.Horse
-      .findOne({name: req.params.name})
+      .find({name: req.params.name})
+      .then(dbModel => {
+        res.json(dbModel)
+    }).catch(err => res.status(422).json(err));
+    },
+
+    findBySire: function(req, res) {
+      db.Horse
+      .find({sire:req.params.sire})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  },
-  findBySire: function(req, res) {
-    db.Horse
-    .find({sire:req.params.sire})
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err));
-  },
+    },
   findByMare: function(req, res) {
     db.Horse
       .find({mare:req.params.mare})

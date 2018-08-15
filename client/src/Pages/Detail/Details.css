@@ -1,0 +1,29 @@
+table {
+    /* font-family: arial, sans-serif; */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 0px solid hsl(105, 9%, 91%);
+    text-align: left;
+    padding: 8px;
+}
+
+
+tr:nth-child(even) {
+    background-color: #2d4059;
+    color: white;
+}
+tr:nth-child(odd) {
+    background-color: #ffb400;
+}
+
+th{
+    background-color: white;
+}
+
+
+.image{
+    text-align: center;
+}

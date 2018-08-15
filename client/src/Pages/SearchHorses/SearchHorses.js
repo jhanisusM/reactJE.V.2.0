@@ -4,7 +4,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input,  FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import Footer from "../../components/Footer";
 
@@ -40,7 +40,7 @@ class SearchHorses extends Component {
         event.preventDefault();
         API.getHorseByName(this.state.name)
             .then(res => {
-                this.setState({ foundHorse: [res.data], horses: [], name: "", sire: "", mare: "", gender: "", age: "" });
+                this.setState({ foundHorse: res.data, horses: [], name: "", sire: "", mare: "", gender: "", age: "" });
             }).catch(err => console.log(err))
     };
 
@@ -68,6 +68,7 @@ class SearchHorses extends Component {
     };
 
     renderSearchResults = () => {
+        console.log(this.state.foundHorse);
         return (
             <List>
                 {this.state.foundHorse.map(horse => (

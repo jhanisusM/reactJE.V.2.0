@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 import Card from "../../components/Card";
 import { Col, Row, Container } from "../../components/Grid";
 import Footer from "../../components/Footer";

@@ -7,6 +7,8 @@ const horseSchema = new Schema({
   mare: String,
   gender: String,
   age: Number,
+  note:String,
+  img:String,
   date: { type: Date, default: Date.now }
 });
 

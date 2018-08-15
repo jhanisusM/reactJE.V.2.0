@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Nav"
 import Home from "./Pages/Home"
@@ -7,6 +7,8 @@ import SearchHorses from "./Pages/SearchHorses";
 import AddHorse from "./Pages/AddHorse"
 import AllHorses from "./Pages/AllHorses";
 import YearlingsWeanlings from "./Pages/YearlingsWeanlings";
+import Detail from "./Pages/Detail";
+
 
 
 const App = () => (
@@ -18,6 +20,7 @@ const App = () => (
         <Route exact path="/SearchHorses" component={SearchHorses} />
         <Route exact path="/AllHorses" component={AllHorses} /> */}
         <Route exact path="/AddHorse" component={AddHorse} />
+        <Route exact path="/horses/:id" component ={Detail} />
         <Route exact path="/YearlingsWeanlings" component ={YearlingsWeanlings} /> 
         <Route exact path="/About" component={About} />
       </Switch>

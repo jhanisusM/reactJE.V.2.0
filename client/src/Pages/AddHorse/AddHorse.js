@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Card from "../../components/Card";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, FormBtn } from "../../components/Form";
 import Footer from "../../components/Footer";
 
 class AddHorse extends Component {
@@ -14,6 +14,8 @@ class AddHorse extends Component {
         mare: "",
         gender: "",
         age: "",
+        note:"",
+        img:"",
     };
 
     handleFormSubmit = event => {
@@ -26,6 +28,8 @@ class AddHorse extends Component {
                 mare: this.state.mare,
                 gender: this.state.gender,
                 age: this.state.age,
+                note: this.state.note,
+                img: this.state.img,
             })
                 .then(res => console.log("Horse was successfully added"))
                 .catch(err => console.log(err));
@@ -80,6 +84,20 @@ class AddHorse extends Component {
                         name="age"
                         type="number"
                         placeholder=" Age (required)"
+                    />
+                     <label for="">Notes:</label>
+                    <Input
+                        value={this.state.note}
+                        onChange={this.handleInputChange}
+                        name="note"
+                        placeholder=" Additional Notes:"
+                    />
+                     <label for="">Image URL:</label>
+                    <Input
+                        value={this.state.img}
+                        onChange={this.handleInputChange}
+                        name="img"
+                        placeholder=" URL image"
                     />
                     <FormBtn
                         disabled={!(this.state.name && this.state.sire)}

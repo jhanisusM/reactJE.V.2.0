@@ -27,27 +27,27 @@ class Home extends Component {
                             <div className="pic">
                                 <Slider {...settings}>
                                     <div>
-                                        <img src="https://c2.staticflickr.com/8/7513/15811731456_c52eab0ee2_b.jpg" />
+                                        <img src="https://c2.staticflickr.com/8/7513/15811731456_c52eab0ee2_b.jpg" alt=""/>
                                         <h3>1</h3>
                                     </div>
                                     <div>
-                                        <img src={"https://c1.staticflickr.com/3/2874/33216679470_213cec8d21_b.jpg"} />
+                                        <img src={"https://c1.staticflickr.com/3/2874/33216679470_213cec8d21_b.jpg"} alt="" />
                                         <h3>2</h3>
                                     </div>
                                     <div>
-                                        <img src={"https://c1.staticflickr.com/9/8081/8291262070_711e4fa6f8_b.jpg"} />
+                                        <img src={"https://c1.staticflickr.com/9/8081/8291262070_711e4fa6f8_b.jpg"} alt="" />
                                         <h3>3</h3>
                                     </div>
                                     <div>
-                                        <img src={"https://c2.staticflickr.com/6/5560/14981083767_fe58976880_b.jpg"} />
+                                        <img src={"https://c2.staticflickr.com/6/5560/14981083767_fe58976880_b.jpg"} alt="" />
                                         <h3>4</h3>
                                     </div>
                                     <div>
-                                        <img src={"https://c1.staticflickr.com/9/8151/7517782448_828ed0b0a3_b.jpg"} />
+                                        <img src={"https://c1.staticflickr.com/9/8151/7517782448_828ed0b0a3_b.jpg"} alt=""/>
                                         <h3>5</h3>
                                     </div>
                                     <div>
-                                        <img src={"https://c1.staticflickr.com/5/4107/4988737130_a66a0a51a4_b.jpg"} />
+                                        <img src={"https://c1.staticflickr.com/5/4107/4988737130_a66a0a51a4_b.jpg"} alt="" />
                                         <h3>6</h3>
                                     </div>
                                 </Slider>

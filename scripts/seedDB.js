@@ -14,6 +14,8 @@ const horseSeed = [
         mare: "Yankee Doodle Girl",
         gender: "F",
         age:4,
+        note:"Earnings: $15,988,500",
+        img:"https://c2.staticflickr.com/2/1329/616830832_76eb4a008b.jpg",
         date: new Date(Date.now())
     },
     {
@@ -22,6 +24,8 @@ const horseSeed = [
         mare: "Female Drama",
         gender: "F",
         age:4,
+        note:"Earnings: $7,000,000",
+        img:"https://c2.staticflickr.com/4/3744/13806262003_bc40c7dd95.jpg",
         date: new Date(Date.now())
     },
     {
@@ -30,6 +34,8 @@ const horseSeed = [
         mare: "Blues Apparition",
         gender: "G",
         age: 5,
+        note:"Earnings: $3,798,000",
+        img:"https://c2.staticflickr.com/6/5573/14606910070_a88f83d0c0.jpg",
         date: new Date(Date.now())
     },  
     {
@@ -38,6 +44,8 @@ const horseSeed = [
         mare: "Summer Cruise",
         gender: "C",
         age:3,
+        note:"",
+        img:"",
         date: new Date(Date.now())
     },
     {
@@ -46,6 +54,8 @@ const horseSeed = [
         mare: "Freedom Rings",
         gender: "G",
         age:3,
+        note:"",
+        img:"",
         date: new Date(Date.now())
     },
     {
@@ -54,6 +64,8 @@ const horseSeed = [
         mare: "Go For The Moon",
         gender: "G",
         age:3,
+        note:"Jockey: Luis Negron  Trainer: Efren Loza, Jr.  Owner: Amaya, Kathleen and Centofanti, Raffaele  Breeder: University of Kentucky",
+        img:"Sold to China Horse Club & Maverick Racing Consigned by Glennwood Farm",
         date: new Date(Date.now())
     },
     {
@@ -62,6 +74,8 @@ const horseSeed = [
         mare: "Yankee Dooodle Girl",
         gender: "G",
         age:3,
+        note:"",
+        img:"https://c2.staticflickr.com/8/7109/6912142962_7fe217f077.jpg",
         date: new Date(Date.now())
     },
     {
@@ -70,6 +84,8 @@ const horseSeed = [
         mare: "Pleasant Guest",
         gender: "G",
         age:3,
+        note:"",
+        img:"",
         date: new Date(Date.now())
     },
     {
@@ -78,6 +94,8 @@ const horseSeed = [
         mare: "Tez Savitra",
         gender: "G",
         age:3,
+        note:"",
+        img:"https://c1.staticflickr.com/9/8106/8514415913_21db8b7922.jpg",
         date: new Date(Date.now())
     },
     {
@@ -86,6 +104,8 @@ const horseSeed = [
         mare: "Sarah's Song",
         gender: "F",
         age:3,
+        note:"Earnings: $1,082,920",
+        img:"",
         date: new Date(Date.now())
     },
     {
@@ -94,6 +114,8 @@ const horseSeed = [
         mare: "Spun Silver",
         gender: "F",
         age:3,
+        note:"",
+        img:"",
         date: new Date(Date.now())
     },
     {
@@ -102,6 +124,8 @@ const horseSeed = [
         mare: "She's all Scat",
         gender: "F",
         age:3,
+        note:"",
+        img:"",
         date: new Date(Date.now())
     },
     {
@@ -110,6 +134,8 @@ const horseSeed = [
         mare: "Lion Cub",
         gender: "F",
         age:3,
+        note:"",
+        img:"https://c2.staticflickr.com/4/3047/2901800490_e6c4f8f915.jpg",
         date: new Date(Date.now())
     },
     {
@@ -118,6 +144,8 @@ const horseSeed = [
         mare: "",
         gender: "C",
         age:2,
+        note:"",
+        img:"",
         date: new Date(Date.now())
     },
     {
@@ -126,6 +154,8 @@ const horseSeed = [
         mare: "Boom Town Girl",
         gender: "C",
         age:2,
+        note:"",
+        img:"",
         date: new Date(Date.now())
     },
     {
@@ -134,6 +164,8 @@ const horseSeed = [
         mare: "Lion Cub",
         gender: "C",
         age:2,
+        note:"BUYER / CONSIGNOR (MOST RECENT): Sold to China Horse Club & WinStar Farm  Consigned by Crupi's New Castle Farm",
+        img:"https://c2.staticflickr.com/4/3166/2901798846_a0c3e02300.jpg",
         date: new Date(Date.now())
     },
 ];
