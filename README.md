@@ -9,7 +9,7 @@ View the live application at: https://drive.google.com/file/d/1-PTfoRmQ69HeSyUUS
 live app at https://soloreactappje2.herokuapp.com/
 
 
-Built With
+Built With <hr />
 * React
 * HTML
 * CSS/Bootstrap
