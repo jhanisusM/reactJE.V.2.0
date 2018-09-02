@@ -7,3 +7,14 @@ While similar to the  previous Jockey Express, this  is a desktop, and web appli
 View the live application at: https://drive.google.com/file/d/1-PTfoRmQ69HeSyUUS2OA9LoSSUDgEsk9/view?usp=sharing
 
 live app at https://soloreactappje2.herokuapp.com/
+
+
+Built With
+React
+HTML
+CSS/Bootstrap
+JavaScript
+JQuery
+MySQL
+Node
+Express
