@@ -10,11 +10,11 @@ live app at https://soloreactappje2.herokuapp.com/
 
 
 Built With
-React
-HTML
-CSS/Bootstrap
-JavaScript
-JQuery
-MySQL
-Node
-Express
+* React
+* HTML
+* CSS/Bootstrap
+* JavaScript
+* JQuery
+* MySQL
+* Node
+* Express
