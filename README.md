@@ -1,6 +1,6 @@
 # REACT-Jockey Express.V.2.0
 
-<img src="https://lh5.googleusercontent.com/GmXRCKhD2uQPUCfk7wON6wLIwuDB0YupFRik7f1WCBUywfX8RU2vMSdZ8VrLmG19H1zolGmLMlwCtBu3eXP6=w1920-h910" />
+<img src="https://image.ibb.co/mpCFze/je_v2_0.png" />
 
 This web application enables horse owners to oversee, access, update, view, modify and update a stable database. It allows the user to enter the sire, mare, gender, age, and picture of the horse of interest.  This application utilizes React to render the client side, and express in the backend. This application was deployed through heroku, and utilizes JavaScript, Express, Sequelize, MySQL, HTML and CSS.
 
