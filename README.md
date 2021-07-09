@@ -6,8 +6,6 @@ This web application enables horse owners to oversee, access, update, view, modi
 
 View the live application at: https://drive.google.com/file/d/1-PTfoRmQ69HeSyUUS2OA9LoSSUDgEsk9/view?usp=sharing
 
-live app at https://soloreactappje2.herokuapp.com/
-
 
 Built With <hr />
 * React
